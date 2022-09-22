@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     if len(argv) == 1:
         sum = 0
-    
+
     elif len(argv) == 2:
         sum += int(argv[1])
 
