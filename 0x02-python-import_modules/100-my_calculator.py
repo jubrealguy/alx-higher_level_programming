@@ -10,19 +10,20 @@ if __name__ == "__main__":
     else:
         a = int(argv[1])
         b = int(argv[3])
+        op = ['+', '-', '*', '/']
 
-        if argv[2] == '+':
+        if argv[2] == op[0]:
             print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
 
-        elif argv[2] == '-':
+        elif argv[2] == op[1]:
             print("{:d} - {:d} = {:d}".format(a, b. sub(a, b)))
 
-        elif argv[2] == '*':
+        elif argv[2] == op[2]:
             print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
 
-        elif argv[2] == '/':
+        elif argv[2] == op[3]:
             print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
 
-        else:
+        elif argv[2] not in op:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
