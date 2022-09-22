@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
         if argv[2] == '+':
             print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-        
+
         elif argv[2] == '-':
             print("{:d} - {:d} = {:d}".format(a, b. sub(a, b)))
 
