@@ -8,6 +8,6 @@ def magic_calculation(a, b):
             else:
                 result = ((a ** b) / i) + result
         except (ValueError, ZeroDivisionError, TypeError):
-            result = b + a
+            result = a + b
             break
     return result
