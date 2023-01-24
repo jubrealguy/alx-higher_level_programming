@@ -50,12 +50,9 @@ class Square:
     """ Prints square with # """
     def my_print(self):
         if self.__size == 0:
-            print()
+            print("")
         else:
-            for i in range(self.position[1]):
-                print("")
-            for i in range(self.__size):
-                print(" "*self.__position[0], end='')
-                for j in range(self.__size):
-                    print("#", end='')
-                print()
+            print("\n" * self.__position[1], end="")
+            print("\n".join([" " * self.__position[0] +
+                             "#" * self.__size
+                             for rows in range(self.__size)]))
