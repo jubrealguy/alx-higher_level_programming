@@ -38,8 +38,9 @@ class Square:
         """ updating position to value """
         self.__position = value
         if len(self.__position) != 2 or type(self.__position) is not tuple or \
-          self.__position[0] < 0 or self.__position[1] < 0 or \
-          type(self.__position[0]) != int or type(self.__position[1]) != int:
+                self.__position[0] < 0 or self.__position[1] < 0 or \
+                type(self.__position[0]) != int or \
+                type(self.__position[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     """ Returns the area of square """
