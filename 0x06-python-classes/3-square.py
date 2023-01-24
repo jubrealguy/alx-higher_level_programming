@@ -7,9 +7,8 @@ and a public instance method Area
 
 class Square:
     """
-    A private instance attr Size and public instance method area
-    """
-    def __init__(self, size):
+    A private instance attr Size and check for errors"""
+    def __init__(self, size=0):
         self.__size = size
         if type(self.__size) != int:
             raise TypeError("size must be an integer")
