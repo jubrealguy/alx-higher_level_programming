@@ -1,4 +1,4 @@
-#!/usr.bin/python3
+#!/usr/bin/python3
 """
 A class Square with a private instance attribute Size
 and a public instance method Area
