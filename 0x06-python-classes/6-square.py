@@ -13,11 +13,13 @@ class Square:
     """ Retrieving size property """
     @property
     def size(self):
+        """ Returns size property """
         return self.__size
 
     """ Updating size property """
     @size.setter
     def size(self, value):
+        """ updating size to value """
         self.__size = value
         if type(self.__size) != int:
             raise TypeError("size must be an integer")
@@ -27,11 +29,13 @@ class Square:
     """ Retrieving position property """
     @property
     def position(self):
+        """ Returns position """
         return self.__position
 
     """ Updating position property """
     @position.setter
     def position(self, value):
+        """ updating position to value """
         self.__position = value
         if len(self.__position) != 2 or type(self.__position) is not tuple or \
           self.__position[0] < 0 or self.__position[1] < 0 or \
@@ -47,6 +51,8 @@ class Square:
         if self.__size == 0:
             print()
         else:
+            for i in range(self.position[1]):
+                print("")
             for i in range(self.__size):
                 print(" "*self.__position[0], end='')
                 for j in range(self.__size):
