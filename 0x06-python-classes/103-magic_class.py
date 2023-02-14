@@ -5,7 +5,7 @@ import math
 
 class MagicClass:
     """ Initialize attributes and define methods """
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """ Initializing radius attribute to 0 """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
