@@ -7,8 +7,8 @@ a class Node that defines a node of a singly linked list
 class Node:
     """ Private instance attribute """
     def __init__(self, data, next_node=None):
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     """ Retrieving data """
     @property
@@ -18,7 +18,7 @@ class Node:
     """ Updating data """
     @data.setter
     def data(self, value):
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("data must be an integer")
         else:
             self.__data = int(value)
