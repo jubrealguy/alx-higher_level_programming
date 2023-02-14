@@ -21,7 +21,7 @@ class Node:
         if type(value) != int:
             raise TypeError("data must be an integer")
         else:
-            self.__data = value
+            self.__data = int(value)
 
     """ Retrieving next node """
     @property
