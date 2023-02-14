@@ -64,12 +64,12 @@ class SinglyLinkedList:
             return
 
         tmp = self.__head
-        if new.data < tmp.data:
+        if tmp.data > new.data:
             new.next_node = self.__head
             self.__head = new
             return
 
-        while (tmp.next_node is not None) and (new.data > tmp.next_node.data):
+        while (tmp.next_node is not None) and (tmp.next_node.data < new.data):
             tmp = tmp.next_node
         new.next_node = tmp.next_node
         tmp.next_node = new
