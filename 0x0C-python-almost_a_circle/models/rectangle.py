@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-from models.base import Base
+
 """ A class Rectangle that inherrits from class Base """
+
+from models.base import Base
 
 
 class Rectangle(Base):
-    """ Class instance constructor """
+    """ Rectangle model with four variables: width, height, x, y """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Class instance constructor """
         super().__init__(id)
         self.width = width
         self.height = height
