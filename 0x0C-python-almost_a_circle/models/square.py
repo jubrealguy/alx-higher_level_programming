@@ -26,3 +26,21 @@ class Square(Rectangle):
         """ A string representation of the instance of the class """
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.width)
+
+    def update(self, *args, **kwargs):
+        """ Public method that assign attributes """
+        att_list = ["size", "x", "y", "id"]
+        if args is not None:
+            for k, v in kwargs.items():
+                if k in att_list:
+                    self.__setattr__(k, v)
+
+        length = len(args)
+        if length > 0:
+            self.size = args[0]
+        if length > 1:
+            self.x = args[1]
+        if length > 2:
+            self.y = args[2]
+        if length > 3:
+            self.id = args[3]
