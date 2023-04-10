@@ -6,8 +6,9 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ A class constructor for instance inheriting from Rectangle """
+    """ A class square inheriting from Rectangle """
     def __init__(self, size, x=0, y=0, id=None):
+        """ A class constructor for instance """
         super().__init__(size, size, x, y, id)
 
     @property
