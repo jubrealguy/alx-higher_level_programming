@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const numsArray = process.argv.slice(2);
-function secondMax (array) {
+function maxSecond (array) {
   if (array.length < 2) {
     return (0);
   } else {
@@ -10,4 +10,4 @@ function secondMax (array) {
     return (array.pop());
   }
 }
-console.log(secondMax(numsArray));
+console.log(maxSecond(numsArray));
