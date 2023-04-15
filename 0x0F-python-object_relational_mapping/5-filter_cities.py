@@ -27,11 +27,7 @@ if __name__ == "__main__":
     rows = cur.fetchall()  # Fetching all rows
     _list = []
     for row in rows:
-        string = ""
-        for item in row:
-            string = string + item
-        _list.append(string)
-    print(str(_list))
-
+        _list.append(row[0])
+    print(", ".join(_list))
     cur.close()
     db.close()
