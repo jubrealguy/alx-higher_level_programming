@@ -25,7 +25,8 @@ if __name__ == "__main__":
             )  # Executing the query
     rows = cur.fetchall()  # Fetching all rows
     for row in rows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
 
     cur.close()
     db.close()
