@@ -22,11 +22,12 @@ if __name__ == "__main__":
             )
     cur = db.cursor()  # Using the cursor method to hold the environment
     cur.execute(
-            """SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY id ASC""".format(argv[4])
+            """SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY id ASC"""
+            .format(argv[4])
             )  # Executing the query
     rows = cur.fetchall()  # Fetching all rows
     for row in rows:
-        if row[1][0] == 'N':
+        if row[1] == argv[4]:
             print(row)
 
     cur.close()
