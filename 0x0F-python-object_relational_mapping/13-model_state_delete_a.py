@@ -20,7 +20,7 @@ if __name__ == "__main__":
     session = Session()  # Instatiate our Session
 
     # deleting states with a in their names
-    for inst in session.query(State):
+    for inst in session.query(State).filter(State.name.like('%a%')).all():
         if 'a' in inst.name:
             session.delete(inst)
 
