@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     # Database querying using python instances
     for inst in session.query(State).order_by(State.id):
-        print("{}:{}".format(inst.id, inst.name))
+        print("{:d}:{:s}".format(inst.id, inst.name))
 
     session.close()
