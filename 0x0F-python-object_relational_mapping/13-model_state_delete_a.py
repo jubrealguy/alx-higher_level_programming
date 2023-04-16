@@ -19,7 +19,7 @@ if __name__ == "__main__":
     session = Session()  # Instatiate our Session
 
     # update the name of state.id 2
-    for inst in session.query(State).all():
+    for inst in session.query(State):
         if 'a' in inst.name:
             session.delete(inst)
             continue
