@@ -18,8 +18,10 @@ if __name__ == "__main__":
     session = Session()  # Instatiate our Session
 
     # Database querying using python instances
-    for inst in session.query(State).order_by(State.id):
-        if list(session.query(State).order_by(State.id)).index(inst) == 0:
-            print("{:d}: {:s}".format(inst.id, inst.name))
+    first = list(session.query(State).order_by(State.id))[0]
+    if first:
+        print("{:d}: {:s}".format(first.id, first.name))
+    else:
+        print("Nothing")
 
     session.close()
