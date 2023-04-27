@@ -7,10 +7,10 @@ The function will be done recursively for a low conplexity
 
 def find_peak(list_of_integers):
     list_ = list_of_integers
-    l = len(list_)
+    length = len(list_)
     i = l - 1
 
-    if l == 0:
+    if length == 0:
         return None
 
     if list_[0] > list_[1]:
