@@ -13,8 +13,8 @@ if __name__ == "__main__":
     else:
         letter = argv[1]
     url = 'http://0.0.0.0:5000/search_user'
-    values = {'q': letter}
-    req = requests.post(url, data=values)
+    value = {'q': letter}
+    req = requests.post(url, data=value)
 
     try:
         dic = req.json()
