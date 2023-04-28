@@ -6,9 +6,10 @@ found in the header of the response
 """
 
 from sys import argv
-import urllib.request
+from urllib.request import urlopen
+from urllib.request import Request
 
 if __name__ == "__main__":
-    req = urllib.request.Request(argv[1])
-    with urllib.request.urlopen(req) as response:
-        print(response.getheader('X-Request-Id'))
+    with urlopen(argv[1]) as response:
+        val = response.getheader('X-Request-Id')
+    print(val)
