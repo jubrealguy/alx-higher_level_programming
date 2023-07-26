@@ -37,5 +37,4 @@ function computeCompletedTasksByUserId (apiUrl) {
   });
 }
 
-// Call the function
 computeCompletedTasksByUserId(apiUrl);
